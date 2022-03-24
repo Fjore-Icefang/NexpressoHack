@@ -149,7 +149,7 @@ U 1 1 623429C5
 P 2850 6800
 F 0 "C3" H 2942 6846 50  0000 L CNN
 F 1 "100p" H 2942 6755 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 2850 6800 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 2850 6800 50  0001 C CNN
 F 3 "~" H 2850 6800 50  0001 C CNN
 	1    2850 6800
 	1    0    0    -1  
@@ -418,41 +418,6 @@ F 3 "~" H 650 3400 50  0001 C CNN
 	1    650  3400
 	-1   0    0    -1  
 $EndComp
-$Comp
-L Connector_Generic:Conn_01x04 J4
-U 1 1 6237B1F1
-P 5600 4650
-F 0 "J4" H 5518 4967 50  0000 C CNN
-F 1 "JTAG" H 5518 4876 50  0000 C CNN
-F 2 "Connector_Molex:Molex_KK-254_AE-6410-06A_1x06_P2.54mm_Vertical" H 5600 4650 50  0001 C CNN
-F 3 "~" H 5600 4650 50  0001 C CNN
-	1    5600 4650
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	6050 4200 5950 4200
-Wire Wire Line
-	5950 4200 5950 4750
-Wire Wire Line
-	6050 4100 5900 4100
-Wire Wire Line
-	5900 4100 5900 4650
-Wire Wire Line
-	6050 4000 5850 4000
-Wire Wire Line
-	5850 4000 5850 4550
-Wire Wire Line
-	5850 4550 5800 4550
-Wire Wire Line
-	5800 4650 5900 4650
-Wire Wire Line
-	5800 4750 5950 4750
-Wire Wire Line
-	5800 4850 7550 4850
-Wire Wire Line
-	7550 4850 7550 3600
-Wire Wire Line
-	7550 3600 7450 3600
 Wire Wire Line
 	5850 2300 6000 2300
 Connection ~ 6000 2300
@@ -593,4 +558,89 @@ Wire Wire Line
 	5350 3950 5350 3400
 Wire Wire Line
 	5350 3400 6050 3400
+$Comp
+L Connector_Generic:Conn_01x06 J4
+U 1 1 623EC92C
+P 8550 2800
+F 0 "J4" H 8630 2792 50  0000 L CNN
+F 1 "Programming" H 8630 2701 50  0000 L CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-06A_1x06_P2.54mm_Vertical" H 8550 2800 50  0001 C CNN
+F 3 "~" H 8550 2800 50  0001 C CNN
+	1    8550 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR0101
+U 1 1 623FC433
+P 7950 3050
+F 0 "#PWR0101" H 7950 2900 50  0001 C CNN
+F 1 "+3V3" H 7965 3223 50  0000 C CNN
+F 2 "" H 7950 3050 50  0001 C CNN
+F 3 "" H 7950 3050 50  0001 C CNN
+	1    7950 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7450 2800 8350 2800
+Wire Wire Line
+	7450 2700 8350 2700
+Text GLabel 8300 2900 0    50   Input ~ 0
+Vin
+Wire Wire Line
+	7950 3100 7950 3050
+Wire Wire Line
+	8300 2900 8350 2900
+$Comp
+L power:GND #PWR0102
+U 1 1 6241482D
+P 8300 3150
+F 0 "#PWR0102" H 8300 2900 50  0001 C CNN
+F 1 "GND" H 8305 2977 50  0000 C CNN
+F 2 "" H 8300 3150 50  0001 C CNN
+F 3 "" H 8300 3150 50  0001 C CNN
+	1    8300 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8300 3150 8300 3100
+Wire Wire Line
+	8300 3100 8350 3100
+Wire Wire Line
+	7950 3100 8150 3100
+Wire Wire Line
+	8150 3100 8150 3000
+Wire Wire Line
+	8150 3000 8350 3000
+$Comp
+L Connector_Generic:Conn_01x02 J5
+U 1 1 6242E468
+P 8550 3450
+F 0 "J5" H 8630 3442 50  0000 L CNN
+F 1 "Programming Jumper" H 8630 3351 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 8550 3450 50  0001 C CNN
+F 3 "~" H 8550 3450 50  0001 C CNN
+	1    8550 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8150 3400 8150 3450
+Wire Wire Line
+	8150 3450 8350 3450
+Wire Wire Line
+	7450 3400 8150 3400
+$Comp
+L power:GND #PWR0103
+U 1 1 62433817
+P 8300 3600
+F 0 "#PWR0103" H 8300 3350 50  0001 C CNN
+F 1 "GND" H 8305 3427 50  0000 C CNN
+F 2 "" H 8300 3600 50  0001 C CNN
+F 3 "" H 8300 3600 50  0001 C CNN
+	1    8300 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8300 3600 8300 3550
+Wire Wire Line
+	8300 3550 8350 3550
 $EndSCHEMATC
